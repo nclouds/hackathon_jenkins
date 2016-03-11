@@ -1,4 +1,4 @@
-job('chef-cookbooks-s3-dsl-job') {
+job('navdeep-test-dsl-job') {
 
 readFileFromWorkspace('parameters.xml')
 
