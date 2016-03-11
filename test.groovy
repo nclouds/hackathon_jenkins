@@ -1,8 +1,11 @@
 import Prams
+
+def params = new Prams()
+
 job('chef-cookbooks-s3-dsl-job') {
 
   parameters {
-    stringParam('deploy_branch', "${branch}")
+    stringParam('deploy_branch', "${params.branch}")
      stringParam('s3_bucket_name', 'navdeep-test')
    }
 
