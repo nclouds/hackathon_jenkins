@@ -2,10 +2,12 @@ import Params
 
 def params = new Params()
 
-job("${params.conf.env}-ken-demo-dsl-job") {
+params.config.each { Map config ->
+
+job("${config.env}-ken-demo-dsl-job") {
   parameters {
-    stringParam('deploy_branch', "${params.config.branch}")
-     stringParam('env', "${params.conf.env}")
+    stringParam('deploy_branch', "${config.branch}")
+     stringParam('env', "${config.env}")
    }
 
   scm {
@@ -22,4 +24,5 @@ job("${params.conf.env}-ken-demo-dsl-job") {
     shell('test')
   }
 
+}
 }
