@@ -1,4 +1,4 @@
-evaluate(new File("params.groovy"))
+evaluate(new File("./params.groovy"))
 job('chef-cookbooks-s3-dsl-job') {
 
   parameters {
