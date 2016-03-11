@@ -2,17 +2,17 @@ import Prams
 
 def params = new Prams()
 
-job('chef-cookbooks-s3-dsl-job') {
+job("${params.conf.env}-ken-demo-dsl-job") {
 
   parameters {
-    stringParam('deploy_branch', "${params.branch}")
-     stringParam('s3_bucket_name', 'navdeep-test')
+    stringParam('deploy_branch', "${params.config.branch}")
+     stringParam('env', "${params.conf.env}")
    }
 
   scm {
         git {
             remote {
-                github('nclouds/vpn', 'https','bitbucket.org')
+                github('nclouds/ken', 'https','bitbucket.org')
                 credentials('navdeep-bitbucket-account')
             }
            branch('*/$deploy_branch')
@@ -20,8 +20,6 @@ job('chef-cookbooks-s3-dsl-job') {
     }
 
   steps {
-    shell('berks package cookbooks.tar.gz')
-    shell('aws s3 cp cookbooks.tar.gz s3://$s3_bucket_name/')
+        shell(readFileFromWorkspace('build.sh'))
   }
-
 }
