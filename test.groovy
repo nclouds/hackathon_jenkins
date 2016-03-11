@@ -21,7 +21,6 @@ job("${config.env}-ken-demo-dsl-job") {
     }
 
   steps {
-    shell('test')
     shell(readFileFromWorkspace('build.sh'))
   }
 
