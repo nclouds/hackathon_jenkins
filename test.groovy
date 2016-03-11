@@ -20,6 +20,6 @@ job("${params.conf.env}-ken-demo-dsl-job") {
     }
 
   steps {
-        shell(readFileFromWorkspace('build.sh'))
+        shell('build.sh')
   }
 }
