@@ -1,6 +1,6 @@
-import Prams
+import Params
 
-def params = new Prams()
+def params = new Params()
 
 job("${params.conf.env}-ken-demo-dsl-job") {
 
