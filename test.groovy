@@ -1,4 +1,4 @@
-evaluate(new File("./params.groovy"))
+import Prams
 job('chef-cookbooks-s3-dsl-job') {
 
   parameters {
