@@ -1,4 +1,4 @@
-job('chef-cookbooks-s3-dsl-job') {
+job('jt-dsl-job-test') {
 
   parameters {
      stringParam('deploy_branch', 'vpn-test')
