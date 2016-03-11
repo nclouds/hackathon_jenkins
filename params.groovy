@@ -1,1 +1,1 @@
-String basePath = 'vpn-test'
+String branch = 'vpn-test'
