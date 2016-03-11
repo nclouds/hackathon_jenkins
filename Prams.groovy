@@ -1,3 +1,3 @@
 class Prams{
-    String branch = 'vpn-test'
+    def branch = 'vpn-test'
 }
