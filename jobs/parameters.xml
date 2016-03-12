@@ -1,5 +1,0 @@
-parameters {
-     stringParam('deploy_branch', 'vpn-test')
-     stringParam('s3_bucket_name', 'navdeep-test')
-   }
-
