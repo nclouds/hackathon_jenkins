@@ -1,4 +1,4 @@
-import Params
+import parameters.Params
 
 def params = new Params()
 

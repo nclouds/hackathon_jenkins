@@ -1,4 +1,6 @@
- class Params {
+package parameters
+ 
+class Params {
 
  def config = [
     [env: "uat", repo: 'nclouds/ken', branch: "master"],
