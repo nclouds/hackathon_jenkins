@@ -24,7 +24,7 @@ job("${config.env}-rss-demo-dsl-job") {
         git {
             remote {
                 github('nclouds/rss-integrator', 'ssh','bitbucket.org')
-                credentials('jenkins')
+                credentials('f9eb3fc3-1176-436d-ac42-fd33e61b6651')
             }
            branch('*/$deploy_branch')
         }
